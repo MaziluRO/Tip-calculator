@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<link rel="stylesheet" href="css/styles.css" />
+
+		<link
+			rel="stylesheet"
+			media="screen and (max-width: 670px)"
+			href="css/medium.css"
+		/>
+
+		<link
+			rel="stylesheet"
+			media="screen and (max-width: 375px)"
+			href="css/small.css"
+		/>
+
+		<title>Frontend Mentor | Tip calculator app</title>
+	</head>
+	<body>
+		<div class="logo">
+			<img src="images/logo.svg" alt="Splitter logo" />
+		</div>
+		<div class="container">
+			<div class="container__options">
+				<div class="container__options__item">
+					<label for="bill-input" class="bill-label input-label">Bill</label>
+					<div class="calc-input" id="bill-calc-input">
+						<input type="number" id="bill-input" placeholder="0" />
+					</div>
+				</div>
+				<div class="container__options__item">
+					<label for="tip-input" class="tip-label input-label"
+						>Select Tip %</label
+					>
+					<div class="calc-buttons">
+						<button class="tip-btn">5%</button>
+						<button class="tip-btn">10%</button>
+						<button class="tip-btn">15%</button>
+						<button class="tip-btn">25%</button>
+						<button class="tip-btn">50%</button>
+						<input type="number" id="tip-input" placeholder="CUSTOM" />
+					</div>
+				</div>
+				<div class="container__options__item">
+					<div class="number-people-container">
+						<label for="people-input" class="people-label input-label"
+							>Number of People</label
+						>
+						<span id="error-msg" class="hidden">Can't be zero</span>
+					</div>
+
+					<div class="calc-input" id="people-calc-input">
+						<input type="number" id="people-input" placeholder="1" />
+					</div>
+				</div>
+			</div>
+			<div class="container__calculator">
+				<div class="calc-tip-container">
+					<div class="show-tip">
+						<div class="tip-name">
+							<h2>Tip Amount</h2>
+							<h3>/ person</h3>
+						</div>
+						<div class="tip-display">
+							<p id="tip-amount">$0.00</p>
+						</div>
+					</div>
+					<div class="show-tip">
+						<div class="tip-name">
+							<h2>Total</h2>
+							<h3>/ person</h3>
+						</div>
+						<div class="tip-display">
+							<p id="total-amount">$0.00</p>
+						</div>
+					</div>
+				</div>
+				<button id="reset-btn" class="disabled">Reset</button>
+			</div>
+		</div>
+
+		<!--
+		<button>123456789%</button>
+		<input
+			class="calculator__tip-input"
+			type="number"
+			id="calculator-tip-custom"
+			placeholder="Custom"
+		/>
+		Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
+		person Total / person Reset
+-->
+		<script src="calculator.js"></script>
+	</body>
+</html>
